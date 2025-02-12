@@ -72,13 +72,13 @@ app.use (passport.initialize());
 app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()))
 
-const store = MongoStore.create{{
+const store = MongoStore.create({
   mongoUrl:dbUrl,
   crypto:{
     secret:process.env.SECRET,
   },
   touchAfter: 24 * 3600,
-}}
+});
 
 const sessionOption = {
   store,
