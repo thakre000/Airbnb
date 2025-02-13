@@ -22,6 +22,7 @@ const passport = require ("passport")
 const session = require("express-session");
 const Login = require ("./views/user/loggin.ejs")
 const MongoStore = require('connect-mongo');
+const passportLocalMongoose = require("passport-local-mongoose");
 
 
 const dbUrl = process.env.ATLASDB_URL;
